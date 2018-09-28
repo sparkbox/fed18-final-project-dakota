@@ -39,7 +39,7 @@ function setHeaders(req, res, next) {
 
 app.use(compression()); // gzip
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use('/', auth, setHeaders, express.static('dist'));
+app.use('/', auth, setHeaders, express.static('docs'));
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}!`);

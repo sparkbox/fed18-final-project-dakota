@@ -14,7 +14,7 @@
   "scripts": {
     "prestart": "npm run clean",
     "start": "node tasks/start.js",
-    "clean": "rimraf dist/",
+    "clean": "rimraf docs/",
     "server": "node tasks/server.js",
     "watch": "concurrently 'node tasks/watch.js' 'webpack --watch'",
     "js": "webpack",
@@ -23,19 +23,19 @@
     "test:js": "npm run eslint",
     "patterns": "node tasks/patterns.js",
     "copy": "node tasks/copy.js",
-    "sass": "node-sass src/scss/ -o dist/css/ --output-style compressed",
+    "sass": "node-sass src/scss/ -o docs/css/ --output-style compressed",
     "cachebust": "node ./node_modules/@sparkbox/cachebust/index.js",
     "cachebust:restore": "node ./node_modules/@sparkbox/cachebust/index.js --restore",
     "cachebust:build": "npm run sass && npm run js && npm run cachebust",
-    "postsass": "postcss --use autoprefixer -c ./postcss.config.json --no-map --dir ./dist/css ./dist/css/*.css"
+    "postsass": "postcss --use autoprefixer -c ./postcss.config.json --no-map --dir ./docs/css ./docs/css/*.css"
   },
   "cachebust": {
     "source": [
-      "dist/css/base.css",
-      "dist/js/main.js"
+      "docs/css/base.css",
+      "docs/js/main.js"
     ],
     "target": [
-      "dist/index.html"
+      "docs/index.html"
     ]
   },
   "dependencies": {

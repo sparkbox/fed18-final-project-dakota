@@ -42,10 +42,10 @@ const downpourOptions = {
     }
   },
   dest: {
-    pages: './dist/',
-    patterns: './dist/patterns',
-    css: './dist/css',
-    js: './dist/js',
+    pages: './docs/',
+    patterns: './docs/patterns',
+    css: './docs/css',
+    js: './docs/js',
   },
   helpers: {
   }

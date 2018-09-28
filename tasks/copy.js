@@ -2,7 +2,7 @@
 const shell = require('shelljs');
 
 const copyPaths = [
-  { from: './src/public/*', to: './dist' },
+  { from: './src/public/*', to: './docs' },
 ];
 
 copyPaths.forEach((path) => {
